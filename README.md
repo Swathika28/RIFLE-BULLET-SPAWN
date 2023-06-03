@@ -70,8 +70,7 @@ or shoot at. Whenever a bullet collides with an object, increase the score and u
 
 
 ### GUN IN HAND:
-![image](https://github.com/Aashima02/Rifle-Bullet-Spawn/assets/93427086/6fe6f4d4-0143-44cd-a200-0ab10c9e564f)
-
+![rifle idel animation](https://github.com/Swathika28/RIFLE-BULLET-SPAWN/assets/95024854/62d60464-f882-42be-a1ea-838b2d909c0c)
 
 
 ## RESULT:
