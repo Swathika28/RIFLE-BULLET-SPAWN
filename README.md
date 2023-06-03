@@ -1,59 +1,144 @@
 
-EXP 04 - RIFLE-BULLET SPAWN
-AIM:
+# EXP 04 - RIFLE-BULLET SPAWN
+[09:20, 6/1/2023] Harsha Daughter No. 2❤️: # EXP 04 - RIFLE-BULLET SPAWN
+
+## AIM:
+
 To Attach Rifle with character mesh and implementation bullet spawn from Rifle.
 
-PROCEDURE:
-Import the character mesh and rifle model into your game engine or development environment. Ensure that both assets are properly rigged and prepared for animation.
+## PROCEDURE:
 
-Create an attachment point on the character's hand or shoulder where the rifle will be attached. This can be achieved by adding a socket or bone to the character's skeleton.
+1. Import the character mesh and rifle model into your game engine or development environment. Ensure that both assets are properly rigged and prepared for animation.
 
-Attach the rifle model to the character's attachment point using the appropriate parenting or socketing mechanism provided by your game engine. This will ensure that the rifle follows the character's movements and animations correctly.
+2. Create an attachment point on the character's hand or shoulder where the rifle will be attached. This can be achieved by adding a socket or bone to the character's skeleton.
 
-Implement the logic for bullet spawning. You'll need to determine the position and direction from which the bullets should be spawned based on the rifle's barrel. Usually, this involves creating a spawn point on the rifle model, such as the barrel tip.
+3. Attach the rifle model to the character's attachment point using the appropriate parenting or socketing mechanism provided by your game engine. This will ensure that the rifle follows the character's movements and animations correctly.
 
-When the player triggers the shooting action (e.g., pressing a button or clicking the mouse), instantiate a bullet object at the spawn point you determined in the previous step. The bullet object should have its own movement and collision logic.
+4. Implement the logic for bullet spawning. Yo…
+[10:16, 6/1/2023] Harsha Daughter No. 2❤️: # EXP 01 - EFFECTS IN UNREAL
 
-Set the initial velocity and direction of the bullet based on the rifle's orientation and any additional factors you want to consider, such as recoil or spread.
+###### NAME: AASHIMA NAZREEN SAYEED S
+###### REG NO: 212221240002 
 
-Continue updating the bullet's position and check for collisions or other interactions until it reaches its target or goes out of bounds. Handle any necessary effects or damage calculations upon collision.
+## AIM:
 
-Repeat the bullet spawning process as needed whenever the player triggers the shooting action.
+To Implement various effects in a material such as emissive, roughness, and metallic properties in Unreal Engine.
 
-TO IMPLEMENT SCORE WEIGHT:
-Create a score variable: Declare a variable to keep track of the player's score. For example, you can initialize it to zero at the beginning of the game.
+## PROCEDURE:
 
-Detect bullet-object collision: Implement a collision detection system to detect when a bullet collides with an object. This can vary depending on the game engine or framework you are using. Typically, you would check for collisions between the bullet and the object using their respective collision shapes or bounding boxes.
+1. Right-click in the content browser and choose material.  Rename the material and double-click to open it.
 
-Handle collision events: When a collision between a bullet and an object is detected, trigger a collision event or callback function. This function will be responsible for handling the specific actions associated with the collision.
+2. Right-click in the working space and search for constants. In constant choose constant vector 
 
-Increase the score: Inside the collision event function, increment the score variable by a certain amount. For example, you can add one point to the score every time a bullet hits an object.
+3. After this double click on the constant vector 4 and edit the colour using the colour
+picker.
 
-Update the score widget: After increasing the score, update the score widget to display the updated score value. This can be done by accessing the score widget element or object and setting its text or value to the updated score variable.
+4. After adjusting the colour click okay and save it.
 
-Display the score widget: Ensure that the score widget is visible to the player during gameplay. This might involve placing it in a prominent position on the screen or integrating it into the game's user interface (UI) system.
+5. They join the output of the constant vector 4 to the base colour.
 
-Repeat the process: Repeat steps 2 to 6 for each object that the player can interact with or shoot at. Whenever a bullet collides with an object, increase the score and update the score widget accordingly.
+6. Create a single constant using step 3 and adjust its value of it using detail panel by
+adjusting…
+[10:16, 6/1/2023] Harsha Daughter No. 2❤️: # EXP 02 - PAWN MOVEMENT
 
-Optional: Add visual and audio feedback: To enhance the player's experience, you can consider adding visual and audio feedback when a bullet hits an object. For example, you might display a particle effect or play a sound effect to signify a successful hit
+###### NAME: AASHIMA NAZREEN SAYEED S
+###### REG NO: 212221240002 
 
-OUTPUT:
-GUN:
-242312096-0fcba2f8-52e4-4374-b59f-2165846c6858
+## AIM:
+To Create a player movement using pawn, collectible, player health, and score.
 
-GUNACTOR:
-242315601-2bd0f7c5-b0cc-46e6-9cd4-96dffc0b4045
+## PROCEDURE:
 
-BULLETACTOR:
-242315843-2c8fa646-257d-4acc-bb12-5fdb8bc2e590
+### To create and destroy the coin:
 
-BLUEPRINTS FOR GUN SPAWN AND BULLET SPAWN:
-242316260-8ac82ecb-bb16-4e9f-b647-699af419325c
+1. Create a new project in Unreal Engine and choose a template that suits your needs.
 
-242316671-7a70f0e3-b7d1-4d02-b9ec-830d515f822f
+2. Add a new actor to the level and call it "Coin".
 
-242317352-47c681db-cf9b-46da-ac01-113aae3ca8c7
+3. Create a new blueprint based on the Coin actor by selecting it in the Content Browser and choosing "Create Blueprint".
 
-242317619-4ac62e9c-cc77-468c-a363-2d32422ec77c
+4. Open the Coin blueprint and add a static mesh component to represent the coin. You can import a 3D model or use one of the default shapes provided by Unreal Engine.
 
-RESULT: To Attach Rifle with character mesh and implementation bullet spawn from Rifle is implemented successfully
+5. Add a collision component to the Coin blueprint so that the player can interact with it. Choose a simple collision shape like a sphere or a box.
+
+6.  Add a variable to the Coin blueprint to keep track of whether the coin has been collected or not. Call it "IsCollected" and set its default value to false.
+
+7.  Create a new blueprint based on the player character by selecting it in the Content Browser and choosing "Create Blueprint".
+
+8. Open the player blueprint and add a collision component to represent the player's interaction with the coins.
+
+9. Add an event to the player blueprint that gets triggered when the player collides with a coin. Use a collision event and check if the collided actor is a coin.
+
+10. If the collided actor is a coin, check if it has already been collected. If not, set its IsCollected variable to true and add its value to a score variable in the player blueprint.
+
+11. Remove the coin from the level by calling its Destroy function.
+
+12. Add several instances of the Coin actor to the level and adjusttheir positions so that they are spread out and not too close to each other.
+
+## OUTPUT:
+
+### Starting position of the player:
+![image](https://github.com/Aashima02/Pawn-Movement/assets/93427086/a07560f0-ad0e-4812-a6e8-80049c24d89f)
+
+### Destroying the coins:
+![image](https://github.com/Aashima02/Pawn-Movement/assets/93427086/a3dc2dc5-4aa5-4499-84d7-35246add6266)
+
+### After destroying all the coins, the score and health bars get updated:
+![image](https://github.com/Aashima02/Pawn-Movement/assets/93427086/e7b6f849-a07b-46f2-bec6-bee5b0cefc64)
+
+## PROCEDURE:
+
+### To redirect to levels:
+
+1. Create a new level or open an existing one.
+
+2.  Add a new widget blueprint by going to the Content Browser and right-clicking in the desired folder. Select User Interface and then Widget Blueprint.
+
+3. Design your menu by adding buttons and other UI elements to the widget. You can use images, text, and other widgets to create a visually appealing menu.
+
+4. Add a button to your menu by dragging and dropping a Button widget from the Palette onto your canvas.
+
+5. In the Button's properties, scroll down to the On Click section and click the + button next to the On Click event.
+
+6. Create a new custom event by clicking the New Binding button and selecting Custom Event.
+
+7. Name the custom event "LoadScene" or something similar.
+
+8.  Open the Level Blueprint by going to the Blueprint menu and selecting Open Level Blueprint.
+
+9. Drag and drop your menu widget from the Content Browser into the Level Blueprint.
+
+10. Create a new variable in the Level Blueprint by clicking the Add Variable button in the My Blueprint panel. Name the variable "MenuWidget" or something similar and set its type to the widget blueprint you created earlier.
+
+11. In the Level Blueprint, drag from the MenuWidget variable and select Set to set the variable's value to the instance of the menu widget you added to the level.
+
+12. Create a new function in the Level Blueprint by clicking the Add Function button in the My Blueprint panel. Name the function "LoadScene" or something similar.
+
+13. Drag from the MenuWidget variable and select Get to get the instance of the menu widget.
+
+14. Drag from the Get node and select Remove From Parent to remove the menu widget from the screen.
+
+15. Drag from the LoadScene custom event and select Open Level to open the desired level or scene.
+
+16. Connect the nodes in the LoadScene function as follows: LoadScene -> Remove From Parent -> Open Level.
+
+17. Go back to your menu widget and select the button you added Earlier.
+
+18. In the Button's properties, scroll down to the On Click section and select the LoadScene custom event you created earlier.
+
+19. Save your changes and playtest your game. When the player clicks on the button in the menu, the menu widget will be removed and the desired level or scene will be loaded.
+
+## CONNECTIONS:
+
+### Play Button:
+![image](https://github.com/Aashima02/Pawn-Movement/assets/93427086/f9abbce1-d07f-4486-a7f4-7b174e5fe11c)
+
+### Quit Button:
+![image](https://github.com/Aashima02/Pawn-Movement/assets/93427086/d1572e81-d8ba-4e29-8927-517e30dcd69f)
+
+### Back Button:
+![image](https://github.com/Aashima02/Pawn-Movement/assets/93427086/1fe733d1-d506-4d1d-a338-87dcea1f6193)
+
+## RESULT:
+
+Thus, To Create a player movement using pawn, collectible, player health, and score created and developed by unreal Engine.
