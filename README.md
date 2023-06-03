@@ -47,9 +47,6 @@ or shoot at. Whenever a bullet collides with an object, increase the score and u
 
 ## OUTPUT:
 
-### GUN:
-![image](https://github.com/Aashima02/Rifle-Bullet-Spawn/assets/93427086/0fcba2f8-52e4-4374-b59f-2165846c6858)/
-
 ### GUNACTOR:
 ![gun actor (1)](https://github.com/Swathika28/RIFLE-BULLET-SPAWN/assets/95024854/da487acc-c44a-4d9f-9997-42cefe0e18bc)
 
